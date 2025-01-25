@@ -15,4 +15,5 @@ code {
 
 button {
   font-family: 'Poppins', sans-serif;
+  text-transform: none;
 }
