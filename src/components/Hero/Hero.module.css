@@ -1,0 +1,70 @@
+/*.Hero {
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     width: 100vh; 
+    
+  }
+  .HeroTitle {
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 48px;
+    font-weight: 600;
+    margin: 20px;
+  }
+  .HeroTitle > h1{
+      height: 48px;
+      font-size: 32px;
+  }
+  .HeroImage {
+    height: 212px;
+    width: 212px;
+  } */
+
+  :root {
+    --bg-color: #000; /* Black background */
+    --text-color: #fff;
+    --primary-font: 'Poppins', sans-serif;
+  }
+  
+  .Hero {
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    width: 100vw;
+    height: 270px;
+    padding: 0 5%;
+    text-align: center;
+  /*  flex-direction: column; /* Stack items in a column */
+  }
+  
+  .HeroTitle {
+   /* font-family: var(--primary-font);*/
+    line-height: 48px;
+    font-weight: 600;
+    margin: 20px;
+  }
+  
+  .HeroTitle h1 {
+    height: 48px;
+    font-size: 32px;
+  }
+  
+  .HeroImage {
+    height: 212px;
+    width: 212px;
+  }
+  
+  /*.HeroImage img {
+    width: 100%;
+    height: auto;
+  }*/
+  
+  
