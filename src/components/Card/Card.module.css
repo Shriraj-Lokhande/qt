@@ -1,0 +1,76 @@
+.cardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    width: 159px;
+    height: 205px;
+    flex-shrink: 0;
+    background-color: #fff;
+    border-radius: 0.7rem;
+  }
+  .cardFollowersCount {
+    display: inline-flex;
+    padding: 4px 8px;
+    align-items: flex-start;
+    gap: 1px;
+    background: #121212;
+    border-radius: 10px;
+    margin-left: 6px;
+    color: #fff;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .cardTitle {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 6px;
+    width: 159px;
+  }
+  .wrapper{
+      width: 160px;
+    
+  }
+  img,svg{
+    display: block;
+    max-width: 100%;
+  }
+  .card{
+      position: relative;
+      width:160px;
+      height: 205px;
+      border-radius: 10px;
+      overflow: hidden;
+      
+  }
+  .banner{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      padding: 6px;
+      background-color: #fff;
+      .chip{
+          background-color: #121212;
+          color: #fff;
+      }
+  }
+  .chip{
+      background-color: #121212;
+      color: #fff;
+  }
+  .titleWrapper{
+      margin-top: 6px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
