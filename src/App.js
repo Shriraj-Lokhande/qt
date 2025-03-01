@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+import styles from "./App.module.css"
 import Navbar from "./components/Navbar/Navbar";
 import Hero from './components/Hero/Hero';
 import Section from "./components/Section/Section";
@@ -109,20 +109,31 @@ export default function App() {
   //   generateTopAlbumData();
   // }, []);
   
-  return(
+  // return(
+  //   <div className="App">
+  //     <Navbar />
+  //     <Hero />
+  //     <div className="sectionWrapper" >
+  //       <Section type='album' title='Top Albums' data={topAlbumSongs}/>
+  //       <Section type='album' title='New Albums' data={newAlbumSongs}/>
+  //       <FilterSection  type='song' title='Songs' value={value} filteredData={filteredData} handleChangeIndex={handleChangeIndex}/>
+  //     </div>
+  //     {/* <div className="cardContainer">
+  //     {topAlbumData.map((item) => {
+  //       return <Card key={item.id} data={item} type="album" />;
+  //     })}
+  //     </div> */}
+  //   </div>
+  // )
+  return (
     <div className="App">
       <Navbar />
       <Hero />
-      <div className="sectionWrapper" >
-        <Section type='album' title='Top Albums' data={topAlbumSongs}/>
-        <Section type='album' title='New Albums' data={newAlbumSongs}/>
-        <FilterSection  type='song' title='Songs' value={value} filteredData={filteredData} handleChangeIndex={handleChangeIndex}/>
+      <div className={styles.sectionWrapper}>
+      <Section type='album' title='Top Albums' data={topAlbumSongs}/>
+      <Section type='album' title='New Albums' data={newAlbumSongs}/>
+      <FilterSection  type='song' title='Songs' value={value} filteredData={filteredData} handleChangeIndex={handleChangeIndex}/>
       </div>
-      {/* <div className="cardContainer">
-      {topAlbumData.map((item) => {
-        return <Card key={item.id} data={item} type="album" />;
-      })}
-      </div> */}
     </div>
-  )
+  );
 }
