@@ -1,76 +1,68 @@
-.cardContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-    width: 159px;
-    height: 205px;
-    flex-shrink: 0;
-    background-color: #fff;
-    border-radius: 0.7rem;
-  }
-  .cardFollowersCount {
-    display: inline-flex;
-    padding: 4px 8px;
-    align-items: flex-start;
-    gap: 1px;
-    background: #121212;
-    border-radius: 10px;
-    margin-left: 6px;
-    color: #fff;
-    font-family: Poppins;
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-  }
-  .cardTitle {
-    color: #fff;
-    font-family: Poppins;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-top: 6px;
-    width: 159px;
-  }
-  .wrapper{
-      width: 160px;
-    
-  }
-  img,svg{
-    display: block;
-    max-width: 100%;
-  }
-  .card{
-      position: relative;
-      width:160px;
-      height: 205px;
-      border-radius: 10px;
-      overflow: hidden;
-      
-  }
-  .banner{
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 42px;
-      display: flex;
-      align-items: center;
-      padding: 6px;
-      background-color: #fff;
-      .chip{
-          background-color: #121212;
-          color: #fff;
-      }
-  }
-  .chip{
-      background-color: #121212;
-      color: #fff;
-  }
-  .titleWrapper{
-      margin-top: 6px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-  }
+.wrapper{
+  width: 160px;
+  /* height: 232px; */
+}
+ 
+.card{
+  position: relative;
+  height: 205px;
+  width: 160px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+ 
+.banner{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 42px;
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  padding: 6px;
+}
+
+.banner .chip{
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+ 
+/* alternative of above chip, a pill */
+.pill {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border-radius: 15px;
+  padding: 6px;
+  font-size: 12px;
+  width: max-content;
+}
+ 
+.titleWrapper{
+  margin-top: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+ 
+ /* 
+ Notes:
+ 
+ 1. In above CSS, overflow: hidden; is applied to the .card class. This ensures that any content within the card that exceeds the specified height 
+     and width of the card will be clipped and not displayed outside of its bounds. This is useful for maintaining the 
+     desired appearance of the card, especially if there are child elements positioned absolutely (like your .banner).
+ 
+ 2. position: absolute;: This property positions the .banner element absolutely relative to its 
+    closest positioned ancestor (in this case, the .card element). This allows the banner to be positioned at the bottom of the .card element.
+ 
+ 3. .chip { ... }: This is a nested CSS rule that applies styles specifically to elements with the class .chip that are descendants of the .banner element. 
+    In this case, it sets the background color of .chip elements to black and the text color to white.
+ 
+ 4. titleWrapper class: 
+     a.) overflow: hidden;: This property specifies what should happen if the content inside the .titleWrapper exceeds the dimensions of its container. 
+         In this case, if the content overflows the container vertically(or in any direction), it will be clipped and hidden from view.
+ 
+     b.) text-overflow: ellipsis;: This property specifies how to handle text that overflows the container horizontally. 
+         When the text exceeds the width of its container, an ellipsis (...) is displayed at the end of the line to indicate
+          that there is more content that is not visible. This is useful for truncating long titles and indicating to users that there 
+          is more text than what is currently displayed.
+  */

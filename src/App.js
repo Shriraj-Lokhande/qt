@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from './components/Hero/Hero';
 /*import Card from "./components/Card/Card";*/
 import { fetchTopAlbums } from "./components/api/api";
-import Section from "./components/Sections/Section";
+import Section from "./components/Section/Section";
 
 export default function App() {
   const [topAlbumData, settopAlbumData] = useState([]);
