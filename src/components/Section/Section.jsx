@@ -10,7 +10,7 @@ const Section = ({ title, data, type }) => {
     setCarosalToggle(!carosalToggle);
   };
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles.header}>
         <h3>{title}</h3>
         <h4 className={styles.toggleText} onClick={handleToggle}>

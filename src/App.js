@@ -3,6 +3,8 @@ import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from './components/Hero/Hero';
 import Section from "./components/Section/Section";
+import FilterSection from './components/FilterSection/FilterSection';
+
 import {fetchTopAlbums, fetchNewAlbums, fetchSongs} from './components/api/api';
 
 export default function App() {
@@ -114,7 +116,7 @@ export default function App() {
       <div className="sectionWrapper" >
         <Section type='album' title='Top Albums' data={topAlbumSongs}/>
         <Section type='album' title='New Albums' data={newAlbumSongs}/>
-        {/* <FilterSection  type='song' title='Songs' value={value} filteredData={filteredData} handleChangeIndex={handleChangeIndex}/> */}
+        <FilterSection  type='song' title='Songs' value={value} filteredData={filteredData} handleChangeIndex={handleChangeIndex}/>
       </div>
       {/* <div className="cardContainer">
       {topAlbumData.map((item) => {

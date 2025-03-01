@@ -14,13 +14,12 @@ import styles from "./Carousel.module.css";
 // If you want to use Navigation, Pagination and other modules, you have to install them first.
 import { Navigation } from 'swiper/modules';
 
-
 const Controls=({data})=>{
     let swiper = useSwiper();
     
     useEffect(()=>{
-        //swiper.slideTo(index, speed, runCallbacks(optional))
-        swiper.slideTo(0,1)
+      //swiper.slideTo(index, speed, runCallbacks(optional))
+      swiper.slideTo(0,1)
     },[data])
 
     return <></>
@@ -30,24 +29,23 @@ const Carousel = ({data,renderCardComponent}) => {
   return (
 
     <div className={styles.wrapper}>
-    <Swiper
+      <Swiper
         initialSlide={0}
         spaceBetween={40}
         slidesPerView={"auto"}
-         // The Pagination module from Swiper.js is explicitly imported and passed to the modules prop of the Swiper component.
-         modules={[Navigation]}
-         allowTouchMove
+        // The Pagination module from Swiper.js is explicitly imported and passed to the modules prop of the Swiper component.
+        modules={[Navigation]}
+        allowTouchMove
         >
         <Controls data={data}/>
-            <CarouselLeft />
-         <CarouselRight />
-         {/* since we need to show the cards of album inside the section, hence use SwiperSlide inside map on data array */}
-      {data.map((item, index) => (
-         // renderCardComponent is using the card component in it to show cards, see in section component
-        <SwiperSlide key={index}>{renderCardComponent(item)}</SwiperSlide>
-      ))}
-       
-    </Swiper>
+        <CarouselLeft />
+        <CarouselRight />
+        {/* since we need to show the cards of album inside the section, hence use SwiperSlide inside map on data array */}
+        {data.map((item, index) => (
+          // renderCardComponent is using the card component in it to show cards, see in section component
+          <SwiperSlide key={index}>{renderCardComponent(item)}</SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   )
 }
